@@ -1,0 +1,12 @@
+You will have to create a document where you can explain in detail how the current project is organized. It is important that it is updated throughout the life of the project and not on the last day.
+The document must include at least:
+Record of issues that were detected during the project’s development
+Documentation of how to use the API
+Record of lessons learned
+
+15/01/24
+- Creación de archivos para empezar a trabajar.
+- Problema a la hora de crear los archivos relacionados con TS 
+debido al desconocimiento y a no entender bien para qué se utiliza.
+- Lecciones aprendidas: comandos para instalar TS, comando para 
+compilar TS y JS.
