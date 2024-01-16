@@ -16,3 +16,5 @@ compilar TS y JS.
 - Registrar en clickup la división de tareas.
 - HTML y CSS (header, sidebar, main container, button).
 - Uso de Bootstrap.
+- Llamar a la API.
+- Mostrar la información de la API en la sidebar y en el main.

@@ -2,6 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
+
 }
 
 /* HEADER */
@@ -10,12 +11,17 @@ header {
     padding: -5rem;
 }
 
+/* .episode-list {
+   
+} */
+
 /* SIDEBAR */
 .sidebar_style {
     float: left; /* Hace que la sidebar flote a la izquierda */
     width: 400px; /* Ancho de la sidebar */
     height: 100%; /* Ocupa toda la altura disponible */
     padding: 20px;
+
 }
 
 /* SIDEBAR LIST */
@@ -46,6 +52,8 @@ ul .list-group-item.active {
 .main-style {
     margin-left: 220px; /* Ajusta el margen izquierdo para dejar espacio para la sidebar */
     text-align: center;
+    font-family:'Courier New', Courier, monospace;
+
 }
 
 /* Estilo para el contenido dentro del main container */
