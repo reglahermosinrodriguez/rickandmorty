@@ -10,3 +10,9 @@ Record of lessons learned
 debido al desconocimiento y a no entender bien para qué se utiliza.
 - Lecciones aprendidas: comandos para instalar TS, comando para 
 compilar TS y JS.
+
+16/01/24
+- Call con Víctor Jáuregui.
+- Registrar en clickup la división de tareas.
+- HTML y CSS (header, sidebar, main container, button).
+- Uso de Bootstrap.

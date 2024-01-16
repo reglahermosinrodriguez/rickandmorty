@@ -1,0 +1,57 @@
+/* Reset de márgenes y padding por defecto en el body y html */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: -5rem;
+}
+
+/* SIDEBAR */
+.sidebar_style {
+    float: left; /* Hace que la sidebar flote a la izquierda */
+    width: 400px; /* Ancho de la sidebar */
+    height: 100%; /* Ocupa toda la altura disponible */
+    padding: 20px;
+}
+
+/* SIDEBAR LIST */
+.list-group {
+    margin-bottom: 20px;
+
+}
+
+ul .list-group-item.active {
+    background-color: #0DACCA;
+    transition:cubic-bezier(1, 0, 0, 1);
+}
+
+
+/* SIDEBAR BUTTON */
+.sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para el main container */
+.main-style {
+    margin-left: 220px; /* Ajusta el margen izquierdo para dejar espacio para la sidebar */
+    text-align: center;
+}
+
+/* Estilo para el contenido dentro del main container */
+.container-style {
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    margin: 20px auto; /* Centra el main container */
+    max-width: 600px; /* Establece el ancho máximo del main container */
+}
