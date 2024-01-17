@@ -63,3 +63,11 @@ ul .list-group-item.active {
     margin: 20px auto; /* Centra el main container */
     max-width: 600px; /* Establece el ancho máximo del main container */
 }
+
+#character-container {
+    display: none;
+  }
+
+  #character-detail-container {
+    display: none;
+  }
