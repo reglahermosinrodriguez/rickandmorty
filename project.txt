@@ -18,3 +18,20 @@ compilar TS y JS.
 - Uso de Bootstrap.
 - Llamar a la API.
 - Mostrar la información de la API en la sidebar y en el main.
+
+17/01/24
+- Workshop Víctor Jáuregui --> Explicación de interfaces, import y export.
+- Asimilar el conocimiento para aplicarlo al proyecto.
+- Creación de carpeta y archivo de interfaces
+- Problema: tres interfaces en un único documento para sólo enlazar
+ese. Al final hemos divido las interfaces y las hemos vinculado 
+una a una.
+- Reinicio del código de TS.
+- Traer info de los episodios, los personajes (enum) y faltan las
+localizaciones.
+
+18/01/24
+- Episodios en la sidebar divididos de 20 en 20.
+- Botón de Next para navegar entre los episodios.
+- Añadir botón Back para volver al inicio.
+

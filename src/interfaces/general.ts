@@ -1,3 +1,6 @@
+import { Location } from "./locations";
+import { Characters } from "./characters";
+
 export interface TopLevel {
     info:    Info;
     results: Result[];
@@ -21,10 +24,3 @@ export interface Result {
 }
 
 
-export interface Characters {
-    name: string;
-    status: string;
-    species: string;
-    gender: string;
-    image: string;
-}
