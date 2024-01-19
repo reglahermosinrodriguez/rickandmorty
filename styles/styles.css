@@ -2,18 +2,21 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: -5rem;
+    padding: -30rem;
 }
 
-/* .episode-list {
+.episode-list{
+    margin-top: 3rem;
+}
    
-} */
+
 
 /* SIDEBAR */
 .sidebar_style {
@@ -26,7 +29,18 @@ header {
 
 /* SIDEBAR LIST */
 .list-group {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+    cursor: pointer;
+    font-family:'Courier New', Courier, monospace;
+   
+
+}
+
+.custom-list-item:hover {
+    color:#0DACCA;
+    font-weight: 600;
+    
 
 }
 
@@ -39,12 +53,16 @@ ul .list-group-item.active {
 /* SIDEBAR BUTTON */
 .sidebar-button {
     display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #007bff;
+    margin-left: 2rem;
+    width: 50%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: #D2DA4C;
     color: white;
-    border: none;
+    font-weight: 600;
+    border: 1rem, #0DACCA;
+    border-radius: 1rem;
+
     cursor: pointer;
 }
 
@@ -71,3 +89,13 @@ ul .list-group-item.active {
   #character-detail-container {
     display: none;
   }
+
+  #episode-list {
+    max-height: 300px;  
+    max-width: 150px; 
+    overflow-y: auto;
+
+    
+    
+  }
+

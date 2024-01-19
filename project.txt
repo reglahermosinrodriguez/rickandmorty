@@ -35,3 +35,9 @@ localizaciones.
 - Botón de Next para navegar entre los episodios.
 - Añadir botón Back para volver al inicio.
 
+19/01/24
+- Cambiar la sidebar porque los episodios no salían uno debajo de otro.
+- Analizar el código una vez terminado.
+- Empezar con CSS.
+- Valorar empezar con extras.
+
