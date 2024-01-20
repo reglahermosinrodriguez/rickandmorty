@@ -1,4 +1,3 @@
-/* Reset de márgenes y padding por defecto en el body y html */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,7 +5,8 @@ body, html {
 
 }
 
-/* HEADER */
+ /* HEADER */
+
 header {
     text-align: center;
     padding: -30rem;
@@ -14,88 +14,133 @@ header {
 
 .episode-list{
     margin-top: 3rem;
+    z-index: 1;
+    text-align: center;
 }
    
-
-
-/* SIDEBAR */
+/* SIDEBAR  */
 .sidebar_style {
-    float: left; /* Hace que la sidebar flote a la izquierda */
-    width: 400px; /* Ancho de la sidebar */
-    height: 100%; /* Ocupa toda la altura disponible */
+    float: left; 
+    width: 300px; 
+    height: 100%; 
     padding: 20px;
-
 }
 
-/* SIDEBAR LIST */
-.list-group {
+  /* SIDEBAR LIST  */
+
+.list-group-item-action {
+    color: black;
+    
+}
+
+.list-group-item-action:hover {
+    font-weight: 600;
+}
+
+.list-of-episodes {
     margin-bottom: 1rem;
     margin-left: 4rem;
     cursor: pointer;
     font-family:'Courier New', Courier, monospace;
-   
-
 }
 
-.custom-list-item:hover {
+.list-of-episodes:hover {
     color:#0DACCA;
-    font-weight: 600;
     
-
 }
 
-ul .list-group-item.active {
-    background-color: #0DACCA;
+ ul .list-group-item.active {
+    background-color: black;
     transition:cubic-bezier(1, 0, 0, 1);
-}
+
+} 
 
 
-/* SIDEBAR BUTTON */
+/* SIDEBAR BUTTON   */
+
 .sidebar-button {
     display: block;
-    margin-left: 2rem;
+    margin-left: 5rem;
     width: 50%;
     padding: 0.5rem;
     margin-top: 1rem;
-    background-color: #D2DA4C;
+    background-color: black;
     color: white;
     font-weight: 600;
-    border: 1rem, #0DACCA;
     border-radius: 1rem;
-
     cursor: pointer;
 }
 
-/* Estilo para el main container */
+.sidebar-button:active {
+    background-color: grey;
+    transform: translateY(0.5rem); 
+}
+
+ /* MAIN CONTAINER   */
+
 .main-style {
-    margin-left: 220px; /* Ajusta el margen izquierdo para dejar espacio para la sidebar */
+    margin-left: 220px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
-
+     /* display: flex;
+    flex-wrap: wrap;  */
+    /* justify-content: center;   */
+    /* background-color: red; */
+    
 }
 
-/* Estilo para el contenido dentro del main container */
+
+ /* CONTENT INSIDE MAIN CONTAINER  */
+
 .container-style {
-    padding: 20px;
-    /* border: 1px solid #ccc; */
-    margin: 20px auto; /* Centra el main container */
-    max-width: 600px; /* Establece el ancho máximo del main container */
+    padding: 2rem;
+    border: 0px solid #ccc;  
+    margin: 20px auto;
+    max-width: 100%; 
+    /* padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 100%;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    justify-content: center; */
 }
 
-#character-container {
-    display: none;
-  }
+.container-character {
+    /* background-color: green; */
+    padding-right: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
 
-  #character-detail-container {
-    display: none;
-  }
+.character-details {
+    background-color: yellow;
+    text-align: left;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0, 4px, 8px rgba(0, 0, 0, 0.1);
+    width: 15rem;
+}
+
+.character-details img {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.character-image {
+    width: 100%;
+    height: auto;
+}
+
+
+.episode-details {
+    color: blue;
+} 
 
   #episode-list {
     max-height: 300px;  
     max-width: 150px; 
     overflow-y: auto;
-
-    
-    
   }
-

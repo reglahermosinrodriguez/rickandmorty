@@ -41,3 +41,7 @@ localizaciones.
 - Empezar con CSS.
 - Valorar empezar con extras.
 
+20/01/24
+- Estilizar web.
+
+

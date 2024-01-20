@@ -10,13 +10,13 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER  -->
 
     <header>
         <img src="assets/rickymorty_header.png" alt="rick and morty header">
     </header>
 
-    <!-- SIDEBAR -->
+    <!-- SIDEBAR  -->
     <section class="sidebar_style">
         <div>
            <h2 class="episode-list">List of episodes</h2>
@@ -27,31 +27,46 @@
             <li class="list-group-item">A fourth item</li>
             <li class="list-group-item">And a fifth one</li>
             </ul> -->
-            <ul id="episode-list" class="list-group">
-                <!-- Los episodios se agregarán aquí dinámicamente -->
+            <ul id="episode-list" class="list-of-episodes">
+               <!-- Los episodios se agregarán aquí dinámicamente -->
             </ul>
             <ul id="total-episodes"></ul>
         </div>
         <button id="nextButton" class="sidebar-button">Next</button>
     </section>
 
-      <!-- MAIN CONTAINER -->
+      <!-- MAIN CONTAINER 
     <section class="main-style">
       <div id="main-container" class="container-style">
-      </div>
+      </div> 
 
-      <div id="character-container" class="container"></div>
+      <div id="character-container" class="container-character"></div>
+      <p id="p-list"></p>
+      <img id="img-list">
+       DETAIL CONTAINER FOR CHARACTER INFO (initially hidden) 
+      <div id="character-detail-container" class="container-details"></div>
 
-      <!-- DETAIL CONTAINER FOR CHARACTER INFO (initially hidden) -->
-      <div id="character-detail-container" class="container"></div>
+
+    </section> -->
+
+    <section class="main-style">
+        <div id="main-container" class="container-style">
+        </div>
+        <!--<div id="episode-details" class="episode-details"></div> -->
+        <div id="character-container" class="container-character"></div>
+            <div id="episode-details" class="episode-details"></div>
+    
+        <p id="p-list"></p>
+        <img id="img-list">
 
 
+        <!-- DETAIL CONTAINER FOR CHARACTER INFO (initially hidden) -->
+        <div id="character-detail-container" class="detail-container"></div>
+    
     </section>
 
     
-
-
-    
+   
 <script type="module" src="/dist/index.js"></script>  
 </body>
 </html>
