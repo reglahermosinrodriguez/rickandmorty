@@ -1,39 +1,35 @@
+/* BODY */
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    /* overflow: hidden; */
     background-color: whitesmoke;
-
 }
 
- /* HEADER */
+/* HEADER */
 
 header {
     text-align: center;
-    /* padding: -30rem; */
-    /* background-color: red; */
     width: 100%;
-    height: 30%
-   
-
+    height: 30% 
 }
 
 img {
-    width: 40%;  /* Esto mantendrá la proporción de la imagen */
+    width: 40%;
     height: 30%;
-    margin: 0 auto;  /* Centra la imagen horizontalmente */
-    display: block;  /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto;
+    display: block;
 }
 
-
-.episode-list{
+.episode-list {
     margin-top: 5rem;
     z-index: 1;
     text-align: center;
 }
    
-/* SIDEBAR  */
+/* SIDEBAR */
+
 .sidebar_style {
     float: left; 
     width: 300px; 
@@ -42,11 +38,10 @@ img {
     margin-top: -5rem;
 }
 
-  /* SIDEBAR LIST  */
+/* SIDEBAR LIST */
 
 .list-group-item-action {
-    color: black;
-    
+    color: black;    
 }
 
 .list-group-item-action:hover {
@@ -62,18 +57,15 @@ img {
 }
 
 .list-of-episodes:hover {
-    color:#0DACCA;
-    
+    color:#0DACCA;    
 }
 
  ul .list-group-item.active {
     background-color: black;
     transition:cubic-bezier(1, 0, 0, 1);
-
 } 
 
-
-/* SIDEBAR BUTTON   */
+/* SIDEBAR BUTTON */
 
 .sidebar-button {
     display: block;
@@ -93,47 +85,32 @@ img {
     transform: translateY(0.5rem); 
 }
 
- /* MAIN CONTAINER   */
+ /* MAIN CONTAINER */
 
 .main-style {
     margin-left: 220px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
-     /* display: flex;
-    flex-wrap: wrap;  */
-    /* justify-content: center;   */
-    /* background-color: red; */
-    
-    
 }
 
-
- /* CONTENT INSIDE MAIN CONTAINER  */
+ /* CONTENT INSIDE MAIN CONTAINER */
 
 .container-style {
-    /* padding: 2rem; */
+    
     padding-top: -3rem;
     border: 0px solid #ccc;  
     margin: 20px auto;
-    max-width: 100%; 
-    /* padding: 1rem;
-    font-family: 'Courier New', Courier, monospace;
     max-width: 100%;
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    justify-content: center; */
 }
 
 .container-character {
-    /*background-color: green;*/
     padding-right: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.5rem;
-    overflow-y: auto; /* Agrega un scroll vertical si es necesario */
-    max-height: 100vh; /* Establece la altura máxima al 100% del viewport height */
+    overflow-y: auto;
+    max-height: 100vh;
     margin-top: -0.1rem;
 }
 
@@ -156,13 +133,23 @@ img {
     height: auto;
 }
 
-
-.episode-details {
-    color: blue;
-} 
-
-  #episode-list {
+#episode-list {
     max-height: 300px;  
     max-width: 150px; 
     overflow-y: auto;
-  }
+}
+
+.character-name {
+    cursor: pointer;
+    
+}
+
+.character-card {
+    /* background-color: red; */
+    justify-content: center;
+}
+
+.location-details {
+    /* background-color: red; */
+    padding-top: 8rem;
+}

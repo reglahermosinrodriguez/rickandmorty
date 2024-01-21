@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<main>
+    
     <!-- HEADER  -->
 
     <header>
@@ -17,56 +17,29 @@
     </header>
 
     <!-- SIDEBAR  -->
+
     <section class="sidebar_style">
         <div>
-           <h2 class="episode-list">List of episodes</h2>
-            <!-- <ul class="list-group">
-            <li class="list-group-item active" aria-current="true">An active item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
-            </ul> -->
+           <h2 class="episode-list">List of episodes</h2>            
             <ul id="episode-list" class="list-of-episodes">
-               <!-- Los episodios se agregarán aquí dinámicamente -->
+               <!-- Episodes will be added here dynamically -->
             </ul>
-            <ul id="total-episodes"></ul>
         </div>
         <button id="nextButton" class="sidebar-button">Next</button>
     </section>
 
-      <!-- MAIN CONTAINER 
-    <section class="main-style">
-      <div id="main-container" class="container-style">
-      </div> 
-
-      <div id="character-container" class="container-character"></div>
-      <p id="p-list"></p>
-      <img id="img-list">
-       DETAIL CONTAINER FOR CHARACTER INFO (initially hidden) 
-      <div id="character-detail-container" class="container-details"></div>
-
-
-    </section> -->
+    <!-- MAIN CONTAINER -->
 
     <section class="main-style">
         <div id="main-container" class="container-style"></div>
-        <!--<div id="episode-details" class="episode-details"></div> -->
         <div id="character-container" class="container-character"></div>
         <div id="episode-details" class="episode-details"></div>
-    
-        <p id="p-list"></p>
-        <img id="img-list">
 
-
-        <!-- DETAIL CONTAINER FOR CHARACTER INFO (initially hidden) -->
+        <!-- DETAIL CONTAINER FOR CHARACTER INFO (INITIALLY HIDDEN) -->
         <div id="character-detail-container" class="detail-container"></div>
     
     </section>
-
     
-</main>
 <script type="module" src="/dist/index.js"></script>
-
 </body>
 </html>

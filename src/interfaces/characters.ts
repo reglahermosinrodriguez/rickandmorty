@@ -4,5 +4,6 @@ export interface Characters {
     species: string;
     gender: string;
     image: string;
+    origin: string;
     location: string[];
 }
