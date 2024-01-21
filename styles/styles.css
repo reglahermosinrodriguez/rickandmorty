@@ -2,6 +2,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+    /* overflow: hidden; */
+    background-color: whitesmoke;
 
 }
 
@@ -9,11 +11,24 @@ body, html {
 
 header {
     text-align: center;
-    padding: -30rem;
+    /* padding: -30rem; */
+    /* background-color: red; */
+    width: 100%;
+    height: 30%
+   
+
 }
 
+img {
+    width: 40%;  /* Esto mantendrá la proporción de la imagen */
+    height: 30%;
+    margin: 0 auto;  /* Centra la imagen horizontalmente */
+    display: block;  /* Asegura que la imagen se comporte como un bloque */
+}
+
+
 .episode-list{
-    margin-top: 3rem;
+    margin-top: 5rem;
     z-index: 1;
     text-align: center;
 }
@@ -24,6 +39,7 @@ header {
     width: 300px; 
     height: 100%; 
     padding: 20px;
+    margin-top: -5rem;
 }
 
   /* SIDEBAR LIST  */
@@ -42,6 +58,7 @@ header {
     margin-left: 4rem;
     cursor: pointer;
     font-family:'Courier New', Courier, monospace;
+    list-style-type: none;
 }
 
 .list-of-episodes:hover {
@@ -87,13 +104,15 @@ header {
     /* justify-content: center;   */
     /* background-color: red; */
     
+    
 }
 
 
  /* CONTENT INSIDE MAIN CONTAINER  */
 
 .container-style {
-    padding: 2rem;
+    /* padding: 2rem; */
+    padding-top: -3rem;
     border: 0px solid #ccc;  
     margin: 20px auto;
     max-width: 100%; 
@@ -107,12 +126,15 @@ header {
 }
 
 .container-character {
-    /* background-color: green; */
+    /*background-color: green;*/
     padding-right: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.5rem;
+    overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+    max-height: 100vh; /* Establece la altura máxima al 100% del viewport height */
+    margin-top: -0.1rem;
 }
 
 .character-details {

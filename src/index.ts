@@ -117,7 +117,7 @@
 
 // });
 
-import { TopLevel, Result } from "./interfaces/TopLevel";
+import { TopLevel, Result } from "./interfaces/general";
 
 async function callApi() {
   try {
