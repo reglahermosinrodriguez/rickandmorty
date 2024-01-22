@@ -45,5 +45,13 @@ localizaciones.
 - Estilizar web.
 
 21/01/24
+- Ordenar código.
+- Comentarios en inglés.
+- Últimos detalles CSS.
+- Inicio extra steps.
+
+22/01/24
+- Acabar extra steps.
+- Terminar proyecto.
 
 

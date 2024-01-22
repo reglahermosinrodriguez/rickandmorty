@@ -22,6 +22,10 @@ img {
     display: block;
 }
 
+#mainHeader {
+    cursor: pointer;
+}
+
 .episode-list {
     margin-top: 5rem;
     z-index: 1;
@@ -109,7 +113,6 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.5rem;
-    overflow-y: auto;
     max-height: 100vh;
     margin-top: -0.1rem;
 }
@@ -147,9 +150,33 @@ img {
 .character-card {
     /* background-color: red; */
     justify-content: center;
+
 }
 
 .location-details {
-    /* background-color: red; */
-    padding-top: 8rem;
+    margin-left: 6rem;
+    /* background-color: blue; */
+}
+
+
+.residents-card {
+    background-color: rgba(251, 159, 180, 0.2);
+    border-radius: 1rem;
+    list-style-type: none;
+    padding-right: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    overflow: auto;
+    max-height: 100vh;
+    margin-top: -0.1rem;
+}
+
+.residents-container {
+    text-align: center;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0, 4px, 8px rgba(0, 0, 0, 0.1);
+    width: 15rem;
 }

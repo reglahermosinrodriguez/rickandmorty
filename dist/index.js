@@ -1,4 +1,4 @@
-// // IMPORT API'S INTERFACES
+// IMPORT API'S INTERFACES
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// DOM
 document.addEventListener("DOMContentLoaded", function () {
     // PRINCIPAL FUNCTION
     function callApi() {
@@ -26,12 +27,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 const resultsPerPage = 20; // Load chapters 20 at a time
                 let visibleEpisodes = []; // Call the Result interface
                 let entireEpisodes;
-                // DOM
                 const showEpisodes = () => {
                     const listEpisodes = document.getElementById('episode-list');
                     const mainContainer = document.getElementById('main-container');
                     const characterContainer = document.getElementById('character-container');
                     const nextButton = document.getElementById('nextButton');
+                    // LINK HEADER 
+                    const headerElement = document.getElementById('mainHeader');
+                    if (headerElement) {
+                        headerElement.addEventListener('click', () => {
+                            // RETURN INDEX            
+                            const mainContainer = document.getElementById('main-container');
+                            const characterContainer = document.getElementById('character-container');
+                            mainContainer.innerHTML = '';
+                            characterContainer.innerHTML = '';
+                            nextButton.style.display = 'block';
+                        });
+                    }
                     // Calculate starting episode number for the current page
                     const firstEpisodeNumber = (presentPage - 1) * resultsPerPage + 1;
                     visibleEpisodes.forEach((result, index) => {
@@ -66,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 Species: ${characterData.species}<br>
                 Status: ${characterData.status}
               `;
-                                characterName.addEventListener('click', () => {
-                                    showCharacterDetails(characterData, characterContainer);
-                                });
+                                characterName.addEventListener('click', () => __awaiter(this, void 0, void 0, function* () {
+                                    yield showCharacterDetails(characterData, characterContainer);
+                                }));
                                 characterDetails.appendChild(characterName);
                                 characterDetails.appendChild(characterImage);
                                 characterContainer.appendChild(characterDetails);
@@ -78,12 +90,23 @@ document.addEventListener("DOMContentLoaded", function () {
                         listEpisodes.appendChild(listItem);
                     });
                     // Next button is only activated if there are more episodes to load
+                    nextButton.style.display = presentPage * resultsPerPage >= entireEpisodes ? 'none' : 'block';
                     nextButton.disabled = presentPage * resultsPerPage >= entireEpisodes;
                 };
                 // Function to show character details
                 function showCharacterDetails(character, container) {
-                    container.classList.add("character-card");
-                    container.innerHTML = `
+                    return __awaiter(this, void 0, void 0, function* () {
+                        container.classList.add("character-card");
+                        const characterEpisodes = yield getCharacterEpisodes(character);
+                        const episodesList = document.createElement("ul");
+                        episodesList.id = "episodesList";
+                        episodesList.classList.add('residents-card');
+                        characterEpisodes.forEach((episode) => {
+                            const episodeItem = document.createElement('li');
+                            episodeItem.textContent = `Episode: ${episode.episode}`;
+                            episodesList.appendChild(episodeItem);
+                        });
+                        container.innerHTML = `
           <div class="character-details">
             <h2>${character.name}</h2>
             <img src="${character.image}" alt="${character.name}" class="character-image">
@@ -93,11 +116,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <p>Origin: ${character.origin.name}</p>
             <p>Location: <a href="#" id="locationLink">${character.location.name}</a></p>
           </div>
+          <div class="character-episode">
+            <p>Episodes: ${characterEpisodes.length}</p>
+            ${episodesList.outerHTML}
+          </div>
         `;
-                    const locationLink = document.getElementById("locationLink");
-                    locationLink.addEventListener("click", () => __awaiter(this, void 0, void 0, function* () {
-                        yield loadLocationDetails(character.location.url, container);
-                    }));
+                        const locationLink = document.getElementById("locationLink");
+                        locationLink.addEventListener("click", () => __awaiter(this, void 0, void 0, function* () {
+                            yield loadLocationDetails(character.location.url, container);
+                        }));
+                    });
                 }
                 // Function to load location details
                 function loadLocationDetails(locationUrl, container) {
@@ -105,18 +133,44 @@ document.addEventListener("DOMContentLoaded", function () {
                         try {
                             const locationResponse = yield fetch(locationUrl);
                             const locationData = yield locationResponse.json();
+                            container.innerHTML = '';
                             container.innerHTML += `
             <div class="location-details">
               <h3>${locationData.name}</h3>
               <p>Type: ${locationData.type}</p>
               <p>Dimension: ${locationData.dimension}</p>
-              <p>Residents: ${locationData.residents.length}</p>
+              <p>Residents:</p>
             </div>
+            <ul id="residentsList" class="residents-card"></ul>
           `;
+                            const residentsList = document.getElementById("residentsList");
+                            for (const residentUrl of locationData.residents) {
+                                const residentResponse = yield fetch(residentUrl);
+                                const residentData = yield residentResponse.json();
+                                const residentItem = document.createElement('li');
+                                residentItem.innerHTML = ` 
+              <div class="residents-container">
+                <strong>${residentData.name}</strong>
+                <img src="${residentData.image}" alt="${residentData.name}" class="resident-image">
+              </div>`;
+                                residentsList.appendChild(residentItem);
+                            }
                         }
                         catch (error) {
                             console.log(error);
                         }
+                    });
+                }
+                // CHARACTER EPISODES
+                function getCharacterEpisodes(character) {
+                    return __awaiter(this, void 0, void 0, function* () {
+                        const episodes = [];
+                        for (const episodeUrl of character.episode) {
+                            const episodeResponse = yield fetch(episodeUrl);
+                            const episodeData = yield episodeResponse.json();
+                            episodes.push(episodeData);
+                        }
+                        return episodes;
                     });
                 }
                 // CALL FUNCTIONS
