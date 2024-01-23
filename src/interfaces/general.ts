@@ -1,28 +1,3 @@
-// import { Location } from "./locations";
-// import { Characters } from "./characters";
-
-// export interface TopLevel {
-//     info:    Info;
-//     results: Result[];
-// }
-
-// export interface Info {
-//     count: number;
-//     pages: number;
-//     next:  string;
-//     prev:  null;
-// }
-
-// export interface Result {
-//     id:         number;
-//     name:       string;
-//     air_date:   string;
-//     episode:    string;
-//     characters: string[];
-//     url:        string;
-//     created:    string;
-// }
-
 export interface TopLevel {
     info:    Info;
     results: Result[];
@@ -45,7 +20,6 @@ export interface Result {
     created:    string;
 }
 
-
 export interface CharacterData {
     name: string;
     image: string;
@@ -56,7 +30,6 @@ export interface CharacterData {
     location: { name: string; url: string };
     episode: string[]; 
   }
-
 
 export interface Location {
     name: string;

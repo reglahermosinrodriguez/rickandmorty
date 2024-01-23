@@ -54,4 +54,10 @@ localizaciones.
 - Acabar extra steps.
 - Terminar proyecto.
 
+23/01/24
+- Corrección de errores null.
+- Repasar código.
+- Preparar presentación. 
+- Grabar vídeo.
+- Entregar proyecto.
 

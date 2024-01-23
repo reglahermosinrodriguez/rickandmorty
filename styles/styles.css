@@ -143,21 +143,16 @@ img {
 }
 
 .character-name {
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 .character-card {
-    /* background-color: red; */
     justify-content: center;
-
 }
 
 .location-details {
     margin-left: 6rem;
-    /* background-color: blue; */
 }
-
 
 .residents-card {
     background-color: rgba(251, 159, 180, 0.2);
