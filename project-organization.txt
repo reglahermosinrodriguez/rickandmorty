@@ -1,0 +1,105 @@
+The project is divided into 7 files. Four of them are folders:
+
+- Assets: Contains the header image.
+- dist: Contains the .js file generated after transpiling .ts.
+- src: Contains the .ts file and the interfaces file.
+- styles: Contains the CSS file.
+
+The remaining 3 files are the index.html, this text file, and the tsconfig.json that specifies the TS compiler settings.
+
+
+Record of issues that were detected during the project’s development:
+
+- Started working with TS without a clear understanding of its purpose and functionality.
+- Prepared the project's kickoff without a clear starting point.
+- Grasped the magnitude and scope of the project.
+- Read the individual project document multiple times to fully comprehend the tasks.
+- Understood the workings of interfaces.
+- Learned about some of the features of TS.
+- Try to understand enums.
+
+
+Documentation of how to use the API:
+
+This API provides information about episodes and characters from the Rick & Morty series.
+
+- Endpoint: https://rickandmortyapi.com/api/episode
+Each episode contains an object that, in turn, includes the following properties:
+
+- id: Identifier for each episode.
+- name: Episode name.
+- air_date: Air date of the episode.
+- episode: Episode code.
+- characters: List of characters in each episode, which in turn contains specific details about their name, gender, status, origin, and location.
+
+
+Record of lessons learned:
+
+- Use of asynchronous functions.
+- Use and internal functioning of APIs.
+- - Use of interfaces (import/export).
+Understanding the dynamic use of APIs.
+
+
+DIARY
+
+15/01/24
+
+- Created files to start working.
+- Faced issues creating files related to TS due to lack of understanding and not grasping its purpose.
+- Lessons learned: Commands to install TS, command to compile TS and JS.
+
+16/01/24
+
+- Call with Víctor Jáuregui.
+- Registered task division in ClickUp.
+- HTML and CSS (header, sidebar, main container, button).
+- Use of Bootstrap.
+- Called the API.
+- Displayed API information in the sidebar and main.
+
+17/01/24
+
+- Workshop with Víctor Jáuregui --> Explanation of interfaces, import, and export.
+- Assimilated knowledge to apply it to the project.
+- Created folder and interfaces file.
+- Faced an issue: three interfaces in a single document to link only that.
+- Restarted TS code.
+- Retrieved information about episodes, characters (enum), and locations pending.
+
+18/01/24
+
+- Episodes in the sidebar divided into sets of 20.
+- Next button to navigate between episodes.
+- Added a Back button to return to the beginning.
+
+19/01/24
+
+- Changed the sidebar because episodes were not displaying properly.
+- Analyzed the code once finished.
+- Started with CSS.
+- Considered starting with extras.
+
+20/01/24
+
+- Styled the web.
+
+21/01/24
+
+- Organized code.
+- Added comments in English.
+- Finalized CSS details.
+- Started extra steps.
+
+22/01/24
+
+- Completed extra steps.
+- Finished the project.
+
+23/01/24
+
+- Correction of null errors.
+- Reviewed code.
+- Prepared presentation.
+- Recorded video.
+- Submitted the project.
